@@ -1,2 +1,0 @@
-# PlanetX
-Connecting the cores
