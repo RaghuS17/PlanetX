@@ -13,10 +13,23 @@
   align-items: center;
   justify-content: space-between;
   gap: 24px;
-  padding: 18px 0;
-  background: rgba(245, 244, 255, 0.85);
-  backdrop-filter: saturate(180%) blur(16px);
-  -webkit-backdrop-filter: saturate(180%) blur(16px);
+  padding: 20px 0;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border-bottom: 1px solid rgba(231, 228, 245, 0.3);
+}
+@media (max-width: 1024px) {
+  .dash-topbar { padding: 16px 0; gap: 16px; }
+  .dash-topbar-left { gap: 12px; }
+  .dash-topbar-mid { max-width: 320px; padding: 8px 14px; }
+}
+@media (max-width: 768px) {
+  .dash-topbar { padding: 12px 0; gap: 10px; }
+  .dash-topbar-mid { max-width: 140px; padding: 6px 10px; }
+}
+@media (max-width: 480px) {
+  .dash-topbar-mid input { display: none; }
 }
 .dash-topbar-left { display: flex; align-items: center; gap: 16px; }
 .dash-topbar-mid {

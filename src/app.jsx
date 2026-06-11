@@ -3,10 +3,10 @@ import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
 import LogoScreen from './LogoScreen.jsx'
 import RoleSelection from './roleselection.jsx'
 import LoginPage from './loginpage.jsx'
-import StudentApp from '../StudentDashboard/StudentApp.jsx'
-import ParentApp from '../ParentDashboard/ParentApp.jsx'
-import TeacherApp from '../TeacherDashboard/TeacherApp.jsx'
-import ManagementApp from '../ManagementDashboard/ManagementApp.jsx'
+import StudentApp from './StudentDashboard/StudentApp.jsx'
+import ParentApp from './ParentDashboard/ParentApp.jsx'
+import TeacherApp from './TeacherDashboard/TeacherApp.jsx'
+import ManagementApp from './ManagementDashboard/ManagementApp.jsx'
 
 export default function App() {
   return (

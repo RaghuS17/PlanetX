@@ -124,7 +124,7 @@ input, textarea, select { font-family: inherit; }
    BOTTOM NAV
    =========================================================== */
 
-.bottom-nav { position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%); background: var(--surface); border: 1px solid var(--line); border-radius: 999px; padding: 8px 12px; display: flex; gap: 4px; box-shadow: 0 10px 40px rgba(20, 20, 30, 0.12); z-index: 100; backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); }
+.bottom-nav { position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%); background: rgba(255, 255, 255, 0.15); border: 1px solid rgba(231, 228, 245, 0.3); border-radius: 999px; padding: 8px 12px; display: flex; gap: 4px; box-shadow: 0 8px 32px rgba(20, 20, 30, 0.12); z-index: 100; backdrop-filter: blur(20px) saturate(180%); -webkit-backdrop-filter: blur(20px) saturate(180%); }
 .nav-item { position: relative; display: flex; flex-direction: column; align-items: center; gap: 2px; padding: 9px 18px; border-radius: 999px; color: var(--ink-mute); font-size: 10px; font-weight: 600; letter-spacing: 0.02em; transition: all 0.3s var(--ease); }
 .nav-item:hover { color: var(--ink); }
 .nav-item.active { background: var(--primary-soft); color: var(--primary); }
@@ -193,4 +193,35 @@ input, textarea, select { font-family: inherit; }
   .topnav-mid { max-width: 160px; padding: 9px 12px; }
   .bottom-nav { padding: 6px 8px; }
   .nav-item { padding: 7px 12px; }
+}
+
+/* Tablet styles (1024px and below) */
+@media (max-width: 1024px) {
+  .app-shell { padding: 0 20px 110px; }
+  .topnav-mid { max-width: 300px; }
+  .topnav { padding: 14px 0; }
+  .brand { font-size: 17px; }
+  .brand-mark:not(img) { width: 24px; height: 24px; }
+  .icon-btn { width: 36px; height: 36px; }
+}
+
+/* Mobile styles (768px and below) */
+@media (max-width: 768px) {
+  :root { font-size: 13px; }
+  .topnav { padding: 12px 0; }
+  .topnav-mid { max-width: 120px; padding: 7px 10px; }
+  .topnav-mid input { font-size: 11px; }
+  .profile-avatar { width: 34px; height: 34px; }
+  
+  .bottom-nav { bottom: 12px; padding: 6px 8px; }
+  .nav-item { padding: 6px 10px; font-size: 9px; }
+  .nav-item span { font-size: 8px; }
+}
+
+/* Small mobile (480px and below) */
+@media (max-width: 480px) {
+  .topnav-left { gap: 8px; min-width: auto; }
+  .topnav-mid { max-width: 80px; padding: 6px 8px; }
+  .topnav-mid input { display: none; }
+  .notif-dropdown { width: 280px; right: -20px; }
 }
